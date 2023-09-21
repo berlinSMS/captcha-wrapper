@@ -1,7 +1,12 @@
 # jQuery CaptchaWrapper
 [Homepage](https://www.berlinsms.de/)
 
-This captcha wrapper makes it easy to include multiple types of captcha on your site. This can be helpful if, for example, you want to let your customers choose the type of captcha.
+# Description
+
+This captcha wrapper makes it easy to include multiple types of captcha on your site. 
+
+This can be helpful if, for example, you want to let your customers choose the type of captcha.
+
 The libraries of the unused captchas are not loaded.
 
 # Usage
@@ -35,7 +40,7 @@ $(document).ready(function () {
 
 Provide options:
 ```js
-$(document).ready(function () {
+$(document).ready(()=>{
     $('.plugin-container').bsmsCaptchaWrapper( { sitekey:'asdfghjklasdfghjkl' } );
 });    
 ```

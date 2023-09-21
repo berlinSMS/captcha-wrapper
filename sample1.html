@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Captcha Wrapper Beispiel</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://static.berlinsms.de/toolsforcoder/captcha-wrapper/bsms-captcha-wrapper.js"></script>
+</head>
+<body>
+
+    <div id="myCaptcha1"></div>
+    <div id="myCaptcha2"></div>
+
+<script>
+    $(() => {
+        $('#myCaptcha1')
+            .bsmsCaptchaWrapper({
+                captchaType: 'reCaptcha',
+                sitekey: '6Le0D10mAAAAADca8S7GVQ9qR30JQdLHIle2gPo9'
+            })
+            .onLoad(onLoadCallback1)
+            .onSolved(onSolvedCallback1)
+            .onExpired(onExpiredCallback1)
+            .onError(onErrorCallback1);
+        $('#myCaptcha2')
+            .bsmsCaptchaWrapper({
+                captchaType: 'hCaptcha',
+                sitekey: 'ff77c0f9-f527-4df2-9a3a-1c4be0db7e9c'
+            })
+            .onLoad(onLoadCallback2)
+            .onSolved(onSolvedCallback2)
+            .onExpired(onExpiredCallback2)
+            .onError(onErrorCallback2);
+    });
+    function onLoadCallback1() {
+        console.log('Captcha1 wurde geladen.');
+    }
+    function onSolvedCallback1(token) {
+        console.log(`Captcha1 wurde gelöst.(token=${token})`);
+    }
+    function onExpiredCallback1(response) {
+        console.log('Captcha1 ist expired. Response: ' + response);
+    }
+    function onErrorCallback1(response) {
+        console.log('Captcha1 hat einen Fehler. Response: ' + response);
+    }
+    function onLoadCallback2() {
+        console.log('Captcha2 wurde geladen.');
+    }
+    function onSolvedCallback2(token) {
+        console.log(`Captcha2 wurde gelöst.(token=${token})`);
+    }
+    function onExpiredCallback2(response) {
+        console.log('Captcha2 ist expired. Response: ' + response);
+    }
+    function onErrorCallback2(response) {
+        console.log('Captcha2 hat einen Fehler. Response: ' + response);
+    }
+</script>
+
+</body>
+</html>
