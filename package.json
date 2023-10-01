@@ -11,10 +11,11 @@
     "deploy": "npm run build && svn commit && git push && npm login && npm publish --access public && npm unpublish @berlinsms/captcha-wrapper@1.0.3 --force"
   },
   "keywords": [
-    "captcha-wrapper",
-    "popup",
-    "pages",
-    "container",
+    "js",
+    "captcha",
+    "wrapper",
+    "hcaptcha",
+    "recaptcha",
     "jquery"
   ],
   "author": "haka for berlinsms <service@berlinsms.de> (https://www.berlinsms.de)",
