@@ -18,12 +18,12 @@ Include jquery
 
 Download bsms-captcha-wrapper
 ```link
-https://raw.githubusercontent.com/berlinSMS/captcha-wrapper/main/bsms-captcha-wrapper.js
+https://static.berlinsms.de/toolsforcoder/captcha-wrapper/dist/bsms-captcha-wrapper.min.js
 ```
 
 Include bsms-captcha-wrapper
 ```html
-<script src="bsms-captcha-wrapper.js"></script>
+<script src="bsms-captcha-wrapper.min.js"></script>
 ```
 
 Find your jquery-container and assign captcha-wrapper
