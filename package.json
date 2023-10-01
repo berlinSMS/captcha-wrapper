@@ -1,0 +1,27 @@
+{
+  "name": "@berlinsms/captcha-wrapper",
+  "version": "1.0.4",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "jQuery-Plugin to wrap different kinds of captchas. The libraries of the unused captchas are not loaded.",
+  "scripts": {
+    "build": "webpack --mode production",
+    "minify": "webpack --mode development",
+    "deploy": "npm run build && svn commit && git push && npm login && npm publish --access public && npm unpublish @berlinsms/captcha-wrapper@1.0.3 --force"
+  },
+  "keywords": [
+    "captcha-wrapper",
+    "popup",
+    "pages",
+    "container",
+    "jquery"
+  ],
+  "author": "haka for berlinsms <service@berlinsms.de> (https://www.berlinsms.de)",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^4.10.0"
+  }
+}
